@@ -1,0 +1,18 @@
+[atom]
+id = "devenv-atom"
+version = "0.1.0"
+propagate = true
+system = true
+
+[std]
+features = ["lib"]
+
+[backend.nix]
+fetcher = "flake-lock"
+
+[fetch.nixpkgs-atom]
+name = "nixpkgs-atom"
+
+[fetch.config]
+name = "rust-atom"
+
