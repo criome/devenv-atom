@@ -4,5 +4,10 @@ mod.pkgs.writeTextFile {
   destination = "/setup";
   text = ''
     : ''${outputs:=out}
+
+    runHook() {
+      eval "$shellHook"
+      unset runHook
+    }
   '';
 }
