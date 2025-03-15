@@ -1,5 +1,5 @@
 # Fix for `nix develop`
-mod.pkgs.writeTextFile {
+pkgs.writeTextFile {
   name = "naked-stdenv";
   destination = "/setup";
   text = ''

@@ -1,5 +1,4 @@
 {
-  inherit (get.nixpkgs-atom) pkgs lib;
   config = get.config.devenv;
-  defaultShell = mod.pkgs.bashInteractive + "/bin/bash";
+  defaultShell = pkgs.bashInteractive + "/bin/bash";
 }

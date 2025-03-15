@@ -6,7 +6,7 @@ derivation {
 
   args = [
     "-ec"
-    "${mod.pkgs.coreutils}/bin/ln -s ${mod.profile} $out; exit 0"
+    "${pkgs.coreutils}/bin/ln -s ${mod.profile} $out; exit 0"
   ];
 
   stdenv = mod.nakedStdenv;
