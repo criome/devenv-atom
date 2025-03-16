@@ -3,7 +3,7 @@ let
     name = "devenv-atom-shell";
     inherit system;
 
-    builder = mod.config.shell or mod.defaultShell;
+    builder = mod.shell.default;
 
     args = [
       "-ec"
@@ -13,6 +13,8 @@ let
     PATH = "${mod.profile}/bin:$PATH";
 
     stdenv = mod.nakedStdenv;
+
+    inherit (mod) shellHook;
   };
 
 in
