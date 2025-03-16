@@ -60,11 +60,11 @@
     "rust-atom": {
       "flake": false,
       "locked": {
-        "lastModified": 1742054675,
-        "narHash": "sha256-1w16eiBlxMHTaH3Z56vHqSBDJUhoBfUQbUIHExiMvmU=",
+        "lastModified": 1742126184,
+        "narHash": "sha256-Q13Q/RCm4bAfMy7V2yPceiGRzig+ByYKib5RRlnW3ZM=",
         "owner": "criome",
         "repo": "rust-atom",
-        "rev": "c7a7acfa049daef39a4d8d8700ff55c4f6c97224",
+        "rev": "32ae2503eda27b5d272ea6791ee37933f83bec60",
         "type": "github"
       },
       "original": {
