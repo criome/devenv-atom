@@ -9,5 +9,7 @@ derivation {
     "${pkgs.coreutils}/bin/ln -s ${mod.profile} $out; exit 0"
   ];
 
+  PATH = "${mod.profile}/bin:$PATH";
+
   stdenv = mod.nakedStdenv;
 }
