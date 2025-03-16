@@ -1,15 +1,19 @@
-derivation {
-  name = "devenv-atom-shell";
-  inherit system;
+let
+  baseArguments = {
+    name = "devenv-atom-shell";
+    inherit system;
 
-  builder = mod.config.shell or mod.defaultShell;
+    builder = mod.config.shell or mod.defaultShell;
 
-  args = [
-    "-ec"
-    "${pkgs.coreutils}/bin/ln -s ${mod.profile} $out; exit 0"
-  ];
+    args = [
+      "-ec"
+      "${pkgs.coreutils}/bin/ln -s ${mod.profile} $out; exit 0"
+    ];
 
-  PATH = "${mod.profile}/bin:$PATH";
+    PATH = "${mod.profile}/bin:$PATH";
 
-  stdenv = mod.nakedStdenv;
-}
+    stdenv = mod.nakedStdenv;
+  };
+
+in
+derivation (mod.config.environment // baseArguments)
