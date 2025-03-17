@@ -1,1 +1,1 @@
-{ config = get.config.devenv; }
+{ DevShells.${system}.default = mod.devShell; }
