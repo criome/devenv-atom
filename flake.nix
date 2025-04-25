@@ -2,17 +2,19 @@
   description = "devenv-atom";
 
   inputs = {
-    atom.url = "github:LiGoldragon/atom/atomicFlake-v1";
-    system.url = "github:criome/system";
+    make-atom.url = "github:criome/make-atom/testing";
+    make-atom.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
-    nixpkgs-lib.flake = false;
+    system.url = "github:criome/system";
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    rust-atom.url = "github:criome/rust-atom";
-    rust-atom.flake = false;
+    rust-atom = {
+      url = "github:criome/rust-atom/testing";
+      inputs.make-atom.follows = "make-atom";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs: inputs.atom.mkAtomicFlake inputs (./. + "/devenv-atom@.toml");
+  outputs = inputs: inputs.make-atom.mkAtomFlake ./. inputs;
 }
