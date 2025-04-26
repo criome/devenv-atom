@@ -16,6 +16,34 @@
         "type": "github"
       }
     },
+    "config": {
+      "inputs": {
+        "crane": "crane",
+        "make-atom": [
+          "make-atom"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay",
+        "src": "src",
+        "system": "system"
+      },
+      "locked": {
+        "lastModified": 1745618150,
+        "narHash": "sha256-vV2CKWTDSZ8Y15bYJ1Yi45wSK2wBi5p7+N6laPK/9kA=",
+        "owner": "criome",
+        "repo": "rust-atom",
+        "rev": "b0a5ee7335c597eabc6bf6bf41018f82aa858ca1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "criome",
+        "ref": "testing",
+        "repo": "rust-atom",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1741481578,
@@ -103,44 +131,16 @@
     },
     "root": {
       "inputs": {
+        "config": "config",
         "make-atom": "make-atom",
         "nixpkgs": "nixpkgs",
-        "rust-atom": "rust-atom",
         "system": "system_2"
-      }
-    },
-    "rust-atom": {
-      "inputs": {
-        "crane": "crane",
-        "make-atom": [
-          "make-atom"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay",
-        "src": "src",
-        "system": "system"
-      },
-      "locked": {
-        "lastModified": 1745618150,
-        "narHash": "sha256-vV2CKWTDSZ8Y15bYJ1Yi45wSK2wBi5p7+N6laPK/9kA=",
-        "owner": "criome",
-        "repo": "rust-atom",
-        "rev": "b0a5ee7335c597eabc6bf6bf41018f82aa858ca1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "criome",
-        "ref": "testing",
-        "repo": "rust-atom",
-        "type": "github"
       }
     },
     "rust-overlay": {
       "inputs": {
         "nixpkgs": [
-          "rust-atom",
+          "config",
           "nixpkgs"
         ]
       },

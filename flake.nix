@@ -9,7 +9,7 @@
 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    rust-atom = {
+    config = {
       url = "github:criome/rust-atom/testing";
       inputs.make-atom.follows = "make-atom";
       inputs.nixpkgs.follows = "nixpkgs";

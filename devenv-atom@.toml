@@ -1,24 +1,11 @@
 [atom]
 id = "devenv-atom"
 version = "0.1.0"
-propagate = true
 system = true
-
-[features]
-default = ["lib", "pkgs"]
+lib = true
+pkgs = true
 
 [backend.nix]
 fetcher = "flake-lock"
 
-[fetch.lib]
-name = "nixpkgs-lib"
-type = "import"
-subdir = "lib"
-
-[fetch.pkgs]
-name = "nixpkgs"
-type = "pkgs"
-
 [fetch.config]
-name = "rust-atom"
-
