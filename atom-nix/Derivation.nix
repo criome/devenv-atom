@@ -15,6 +15,8 @@ let
     stdenv = mod.nakedStdenv;
 
     inherit (mod) shellHook;
+
+    SHELL = mod.shell.interactive;
   };
 
 in
